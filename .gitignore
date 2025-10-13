@@ -1,0 +1,7 @@
+.vercel
+/.env
+node_modules
+.idea
+vercel.json
+package-lock.json
+package.json

@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "YouRead",
+  "version": "1.0.0",
+  "description": "Generate an informative article from any YouTube video’s metadata and transcript.",
+  "permissions": ["activeTab", "scripting", "storage", "background"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "assets/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"]
+    }
+  ]
+}
