@@ -99,7 +99,7 @@ function initializeEventListeners() {
             return;
         }
         
-        const format = confirm("Choose format:\nOK = PDF\nCancel = DOCX") ? "pdf" : "docx";
+        const format = confirm("Click OK to Download PDF") ? "pdf" : "none";
         await downloadArticle(currentArticleData, format);
     });
 
