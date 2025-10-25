@@ -72,12 +72,11 @@ async function generateArticle(videoData) {
     };
 
     console.log("📡 Sending request to local server:");
-    console.log("  🌐 URL: https://glyptographic-heelless-jimmie.ngrok-free.dev/v1/chat/completions");
     console.log("  🤖 Model:", requestBody.model);
     console.log("  📊 Request body:", JSON.stringify(requestBody, null, 2));
 
     // Send to your local OpenAI-compatible server
-    const res = await fetch("https://glyptographic-heelless-jimmie.ngrok-free.dev/v1/chat/completions", {
+    const res = await fetch("YOUR_LINK_HERE", {
         method: "POST",
         headers: { 
             "Content-Type": "application/json",
