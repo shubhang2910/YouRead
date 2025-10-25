@@ -65,8 +65,26 @@ button:active {
 #buttons {
     display: flex;
     gap: 12px;
-    margin-bottom: 20px;
+    flex-wrap: wrap;           /* allow buttons to flow to new lines on narrow popups */
     justify-content: center;
+    align-items: center;
+}
+
+#buttons button {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    min-width: 120px;          /* allow wider labels; tweak as needed */
+    min-height: 48px;          /* ensures touch-friendly size */
+    height: auto;              /* avoid fixed height that clips text */
+    line-height: 1.2;
+    white-space: normal;       /* allow wrapping */
+    text-align: center;        /* center multi-line text */
+    word-break: break-word;    /* break long words if necessary */
+    overflow: visible;         /* don't hide overflowing text */
+    font-size: 14px;          /* adjust if text still too big */
 }
 
 #generate {
